@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\ナカムラ　マサト\AppData\Local\Programs\VisualBat_1.1.1\VisualBat.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEE8B30E-91EE-43D3-BA90-84664D2F2F3A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>VisualBat</AssemblyName>
+    <ApplicationVersion>1.1.1.0</ApplicationVersion>
+    <RootNamespace>VisualBat</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IpcLib">
+      <HintPath>lib\IpcLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Setting.cs" />
+    <Compile Include="VersionInfoDialog.cs" />
+    <Compile Include="LicenceDialog.cs" />
+    <Compile Include="AddIdiomDialog.cs" />
+    <Compile Include="Win32Api.cs" />
+    <Compile Include="FindDialog.cs" />
+    <Compile Include="ReentryBlock.cs" />
+    <Compile Include="CommandReferenceDialog.cs" />
+    <Compile Include="CommandType.cs" />
+    <Compile Include="HelpType.cs" />
+    <Compile Include="CommandData.cs" />
+    <Compile Include="BatKeyword.cs" />
+    <Compile Include="RunCommandDialog.cs" />
+    <Compile Include="MainForm.cs" />
+    <Compile Include="BatDebugger.cs" />
+    <Compile Include="ReplaceDialog.cs" />
+    <Compile Include="LinedRichTextBox.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="RichTextBoxEx.cs" />
+    <Compile Include="DraggableTabControl.cs" />
+    <Compile Include="MessageID.cs" />
+    <Compile Include="MessageDialog.cs" />
+    <Compile Include="OptionDialog.cs" />
+    <Compile Include="StringFinder.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddIdiomDialog.resx" />
+    <EmbeddedResource Include="CommandReferenceDialog.resx" />
+    <EmbeddedResource Include="FindDialog.resx" />
+    <EmbeddedResource Include="LicenceDialog.resx" />
+    <EmbeddedResource Include="LinedRichTextBox.resx" />
+    <EmbeddedResource Include="MainForm.resx" />
+    <EmbeddedResource Include="OptionDialog.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="ReplaceDialog.resx" />
+    <EmbeddedResource Include="VersionInfoDialog.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
